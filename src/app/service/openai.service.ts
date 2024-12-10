@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class OpenaiService {
 
   private readonly apiUrl = 'https://api.openai.com/v1/chat/completions';
-  private apiKey = '';
+  private apiKey = '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';
 
   constructor(private http: HttpClient) { }
 
