@@ -1,0 +1,256 @@
+.content-chat {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.version-text {
+    opacity: .5;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.input-container {
+    width: 100%;
+    max-width: 48rem;
+    position: relative;
+}
+
+.input-container-chat-activo {
+    width: 100%;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    padding-right: 6rem;
+    border-radius: .75rem;
+    border: 1px solid hsl(0, 0%, 100%, 0.12);
+    background-color: hsl(240 3% 8%);
+    color: #ffffff;
+    resize: none;
+    font-size: 1rem;
+}
+
+textarea::placeholder {
+    color: hsl(240 5.2% 33.92%);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: hsl(0, 0%, 100%, 0.15);
+}
+
+.input-buttons {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-text {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-ghost {
+    color: #d1d5db;
+    background-color: transparent;
+}
+
+.btn-ghost:hover {
+    background-color: hsl(240 4.62% 12.75%);
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.btn-primary:hover {
+    background-color: #e5e7eb;
+}
+
+.btn-secondary {
+    background-color: hsl( 0 0% 4%);
+    border: 1px solid hsl(0, 0%, 100%, 0.12) !important;
+    color: hsl(0 0% 100%);
+    border-radius: 9999px !important;
+    font-size: 0.875rem;
+}
+
+.btn-secondary:hover {
+    background-color: hsl(240 4.62% 12.75%);
+    color: #ffffff;
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .125rem;
+    border-radius: 6px !important;
+    border: 1px solid hsl(0, 0%, 100%, 0.12);
+    background: hsl(240 4.62% 12.75%);
+}
+
+.icon-xs {
+    font-size: 15px;
+}
+
+/* Links */
+a {
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.text-center {
+    text-align: center;
+}
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 1.5rem;
+    margin-bottom: 10px;
+    max-width: 80%;
+    line-height: 1.7rem;
+}
+
+.user {
+    display: flex;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.chatgpt {
+    color: white;
+    opacity: .6;
+}
+
+.content-icon-chatgpt {
+    display: flex;
+    gap: .5rem;
+}
+
+.icon-md {
+    margin-top: 5px;
+    height: 20px;
+    min-width: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    .suggestions {
+        justify-content: center;
+    }
+}
