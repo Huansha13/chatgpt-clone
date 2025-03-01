@@ -11,8 +11,7 @@ export class OpenaiService {
 
   constructor(private http: HttpClient) {}
 
-  magicloopsRun(value: string): Observable<any> {
-    const body = { question: value };
+  magicloopsRun(body: {}): Observable<any> {
     return this.http.post<any>(this.apiUrl, body);
   }
 }

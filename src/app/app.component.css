@@ -86,7 +86,7 @@ textarea::placeholder {
 
 textarea:focus {
     outline: none;
-    border-color: hsl(0, 0%, 100%, 0.15);
+    border-color: hsl(0, 0%, 100%, 0.2);
 }
 
 .input-buttons {
@@ -254,3 +254,24 @@ a:hover {
         justify-content: center;
     }
 }
+.message.chatgpt ::ng-deep pre {
+    border-radius: 5px;
+}
+.message.chatgpt ::ng-deep code {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+@keyframes typingDots {
+    0% { content: "Escribiendo"; }
+    33% { content: "Escribiendo."; }
+    66% { content: "Escribiendo.."; }
+    100% { content: "Escribiendo..."; }
+  }
+  
+  .bot-typing::after {
+    content: "Escribiendo";
+    animation: typingDots 1.5s infinite steps(1);
+    font-size: 13px;
+  }

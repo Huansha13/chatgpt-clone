@@ -20,11 +20,21 @@
         } @else {
         <div class="message chatgpt">
           <div class="content-icon-chatgpt">
-            🤡
-            <div>{{item.message}}</div>
+            🤖
+            <div *ngIf="item.message">
+              <markdown [data]="item.message"></markdown>
+            </div>
           </div>
         </div>
         }
+      }
+
+      @if (loadRespuesta) {
+        <div class="message chatgpt">
+          <div class="bot-typing">
+            <span></span>
+          </div>
+        </div>
       }
     </div>
   </main>
@@ -78,7 +88,7 @@
    (keydown.enter)="sendMessage()">
   </textarea>
   <div class="input-buttons">
-    <button class="btn btn-ghost btn-icon" (click)="sendMessage()">
+    <button class="btn btn-ghost btn-icon" [disabled]="loadRespuesta" (click)="sendMessage()">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="m5 12 7-7 7 7" />
