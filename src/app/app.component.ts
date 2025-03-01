@@ -21,8 +21,8 @@ type Chats = {
 })
 export class AppComponent {
   @ViewChild('inputMss', {static: true}) inputMss!: ElementRef<HTMLInputElement>;
-  version = 'V.1.0.0';
-  title = 'Chat';
+  version = 'V.1.1.0';
+  title = 'Chat 🤡';
   today = new Date().getFullYear();
   chats: Chats[] = [];
   message: string = '';
@@ -52,10 +52,10 @@ export class AppComponent {
     if (this.message && this.message.trim().length > 0) {
       this.setChat('USER', this.message.trim());
 
-      this.openaiService.generateText(this.message.trim())
+      this.openaiService.magicloopsRun(this.message.trim())
         .subscribe({
-          next: (data) => {
-            const responseMessage = data.choices[0].message?.content?.trim() || '';
+          next: (rpt) => {
+            const responseMessage = rpt || '';
             this.setChat('OPEN_AI', responseMessage);
           },
           error: (error) => {
